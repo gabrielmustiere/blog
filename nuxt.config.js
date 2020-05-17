@@ -21,11 +21,13 @@ export default {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    '@/node_modules/highlight.js/styles/atom-one-dark.css'
+  ],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['~/plugins/vue-highlight.js'],
   /*
   ** Nuxt.js dev-modules
   */
@@ -68,6 +70,7 @@ export default {
   ** Prismic
   */
   prismic: {
-    endpoint: 'https://gabrielmustiere-site.cdn.prismic.io/api/v2'
+    endpoint: 'https://gabrielmustiere-site.cdn.prismic.io/api/v2',
+    htmlSerializer: '~app/prismic/html-serializer.js'
   }
 }
