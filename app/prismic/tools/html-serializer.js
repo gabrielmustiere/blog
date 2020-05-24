@@ -1,19 +1,19 @@
-import PrismicDOM from 'prismic-dom'
-import higlight from 'highlight.js'
+import PrismicDOM from 'prismic-dom';
+import higlight from 'highlight.js';
 
-const Elements = PrismicDOM.RichText.Elements
+const Elements = PrismicDOM.RichText.Elements;
 
 higlight.addPlugin({
   afterHighlightBlock: ({ block, result }) => {
-    // move the language from the result into the dataset
-    block.dataset.language = result.language
+    block.dataset.language = result.language;
   }
-})
+});
 
 export default function (type, element, content, children) {
   switch (type) {
     case Elements.preformatted:
 
+      /* eslint-disable */
       const elements = element.text.split('##---##')
       const language = elements[0].substring(0, elements[0].length - 1)
       const code = elements[1].substr(1)

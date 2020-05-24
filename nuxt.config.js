@@ -63,7 +63,10 @@ export default {
     extend (config, ctx) {
     },
     babel: {
-      plugins: ['@babel/plugin-proposal-optional-chaining']
+      plugins: [
+        '@babel/plugin-transform-classes',
+        '@babel/plugin-proposal-optional-chaining'
+      ]
     }
   },
   /*
@@ -71,6 +74,6 @@ export default {
   */
   prismic: {
     endpoint: 'https://gabrielmustiere-site.cdn.prismic.io/api/v2',
-    htmlSerializer: '~app/prismic/html-serializer.js'
+    htmlSerializer: '@/app/prismic/tools/html-serializer.js'
   }
-}
+};

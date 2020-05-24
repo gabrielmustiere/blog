@@ -1,3 +1,3 @@
 export default function (doc) {
-  return '/'
+  return '/';
 }

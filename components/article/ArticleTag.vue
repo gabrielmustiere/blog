@@ -1,7 +1,7 @@
 <template>
-  <div>
-    tag
-  </div>
+  <span class="px-2 py-1 bg-teal-500 text-white rounded text-xs font-medium uppercase">
+    #{{ tag.data.titre }}
+  </span>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
       required: true
     }
   }
-}
+};
 </script>
 
 <style scoped>

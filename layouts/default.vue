@@ -70,12 +70,12 @@
     </nav>
 
     <main>
-      <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="py-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <!-- Replace with your content -->
-        <div class="px-4 py-6 sm:px-0">
-          <div class="border-4 border-gray-200 border-dashed rounded-lg h-96">
-            <nuxt />
-          </div>
+        <div class="px-4 py-2 sm:px-0">
+          <!--          <div class="border-4 border-gray-200 border-dashed rounded-lg h-96">-->
+          <nuxt />
+          <!--          </div>-->
         </div>
         <!-- /End replace -->
       </div>
@@ -94,12 +94,12 @@ export default {
         Projets: '/projets',
         'Qui suis-je ?': '/cv'
       }
-    }
+    };
   },
   methods: {
     toggleMenu () {
-      this.openMenu = !this.openMenu
+      this.openMenu = !this.openMenu;
     }
   }
-}
+};
 </script>

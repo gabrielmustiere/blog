@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <prismic-rich-text :field="contenu" />
-  </div>
+  <prismic-rich-text :field="contenu" class="text-gray-700 my-4" />
 </template>
 
 <script>
@@ -14,5 +12,5 @@ export default {
     }
   }
 
-}
+};
 </script>
