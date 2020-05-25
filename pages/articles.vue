@@ -13,7 +13,9 @@
           <img class="h-24 w-24" :src="article.data.image.vignette.url" :alt="article.data.image.mobile.alt">
         </div>
         <div class="flex-1 flex-col">
-          <prismic-rich-text :field="article.data.titre" class="mt-2" />
+          <nuxt-link :to="{ name: 'article-id', params: { id: article.uid } }">
+            <prismic-rich-text :field="article.data.titre" class="mt-2 underline" />
+          </nuxt-link>
           <prismic-rich-text :field="article.data.description" class="mt-1 mb-3 text-justify" />
           <div class="flex flex-row flex-no-wrap items-center justify-between">
             <div class="flex space-x-1 mb-3">
@@ -103,7 +105,7 @@ export default {
 
 <style>
   h1 {
-    @apply text-xl text-gray-900
+    @apply text-2xl text-gray-900
   }
 
   p {

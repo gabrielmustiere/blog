@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="text-4xl" v-html="$prismic.asHtml(article.data.titre)" />
+    <img class="" :src="article.data.image.url" :alt="article.data.image.mobile.alt">
+    <prismic-rich-text :field="article.data.titre" class="mt-2 underline" />
     <div v-html="$prismic.asHtml(article.data.description)" />
     <div v-html="$prismic.asHtml(article.data.contenu)" />
   </div>
